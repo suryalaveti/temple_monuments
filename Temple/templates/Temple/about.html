@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>about</title>
+</head>
+<style type="text/css">
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  
+  a p:hover{
+  font-size: 24px;
+  color: rgb(184, 231, 250);
+}
+}
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="{% url 'home' %}"><p>Home</p> </a>
+        <a class="nav-item nav-link" href="{% url 'direct' %}"><p>Map</p></a>
+        <a class="nav-item nav-link" href="{% url 'about' %}""><p>About</p><span class="sr-only">(current)</span></a>
+      </div>
+    </div>
+  </nav>
+<div class="about-section">
+  <h1>About Us</h1>
+  <p> Our project team consists of highly skilled and experienced software developers, designers, and project managers. We are passionate about creating innovative software solutions that meet our clients' needs and exceed their expectations . We have collected genuine information related to temples and their history.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Jane" style="width:100%;height: 190pt;">
+      <div class="container">
+        <h2>NAGA DURGA</h2>
+        <p class="title">DEVELOPER</p>
+        <p>Programmer , hardworker , talkative , active person.</p>
+        <p>durga@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.pngkey.com/png/detail/85-853028_ebay-store-list-mad-men-logo.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>SURYA PRAKASH</h2>
+        <p class="title">DEVELOPER</p>
+        <p>Programmer , hardworker , talkative , active person.</p>
+        <p>surya@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Jane" style="width:100%;height: 190pt;">
+      <div class="container">
+        <h2>LAHARI</h2>
+        <p class="title">SOFTWARE ENGINEER</p>
+        <p>hardworker , talkative.</p>
+        <p>lahari@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Jane" style="width:100%;height: 190pt;">
+      <div class="container">
+        <h2>SRI VYSHNAVI</h2>
+        <p class="title">SOFTWARE ENGINEER</p>
+        <p>hardworker , talkative.</p>
+        <p>vyshnavi@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.pngkey.com/png/detail/85-853028_ebay-store-list-mad-men-logo.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>MANIKANTA</h2>
+        <p class="title">SOFTWARE ENGINEER</p>
+        <p>hardworker , active person.</p>
+        <p>manikanta@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

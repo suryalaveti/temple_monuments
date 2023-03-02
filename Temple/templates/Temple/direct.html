@@ -1,0 +1,63 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>direct page</title>
+  </head>
+  <style>
+    #map{
+            margin-left: 5%;
+            border-radius: 10px;
+            margin-bottom:auto ;
+        }
+        body{
+        
+        background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("{% static 'image/direct.jpg' %}");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:fixed;
+      }
+      p{
+        padding-right: 20px;
+        color:whitesmoke;
+        font-size:larger;
+        font-weight: 600;
+    }
+    a p:hover{
+  font-size: 24px;
+  color: rgb(184, 231, 250);
+}
+  </style>
+<body>
+ <!-- Nav bar-->
+ <nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'home' %}"><p>Home</p> </a>
+      <a class="nav-item nav-link" href="{% url 'direct' %}"><p>Map</p><span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{% url 'about' %}""><p>About</p></a>
+    </div>
+  </div>
+</nav>
+  <!--end nav bar-->
+  <div id="map" align="center" class="mapn"> 
+  <div class="container">
+    <div class="row mt-4">
+        <div class="col-md-10 offset-md-2">
+            {{ m|safe }}
+        </div>
+    </div>
+  </div>
+  </div>
+  </body>
+</html>

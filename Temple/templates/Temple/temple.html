@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>{{ name|upper }}</title>
+    <style>
+        body{
+          background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("{% static 'image/temples/' %}{{id}}.jpg");
+            /* background-repeat: no-repeat;
+            background-size: cover;
+            background-position: fixed;
+            background-size: 1200pt 500pt; */
+            /* width: auto;
+        height: auto; */
+  background-position : fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+        }
+        h3{
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+       h1{
+        color:yellow;
+        font-style: oblique;
+       }
+      
+        p{
+          padding-right: 20px;
+            color: white;
+        }
+
+        a p:hover{
+  font-size: 24px;
+  color: rgb(184, 231, 250);
+}
+    </style>
+</head>
+<body>
+    <div class="bg">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'home' %}"><p>Home</p> <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'direct' %}"><p>Map</p></a>
+            <a class="nav-item nav-link" href="{% url 'about' %}"><p>About</p></a>
+          </div>
+        </div>
+      </nav><br>
+    <h1>Temple Name</h1>
+    <p>{{ name }}</p>
+    <h1>Place</h1>
+    <p>{{ place }}</p>
+    <h1>History of the Temple</h1>
+    <p>{{ history }}</p>
+    <h1>Darshnam Timings</h1>
+    <p>{{ timings }}</p>
+    <h1>Pooja's and Seva's</h1>
+    <p>{{ pooja }}</p>
+    <h1>Food Details(Annasamaradhana)</h1>
+    <p>{{ food }}</p>
+    <h1>Income of the Temple</h1>
+    <p>{{ income }}</p>
+    </div>
+</body>
+</html>
