@@ -1,3 +1,5 @@
 folium
 folium.plugins
 geocoder
+django
+gunicorn
